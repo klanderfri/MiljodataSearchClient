@@ -7,6 +7,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        UxHelper.PrintVersion("0.1.0");
         var path = UxHelper.GetValidDirectoryPath();
 
         while (true)
@@ -20,6 +21,12 @@ internal class Program
 
 internal static class UxHelper
 {
+    public static void PrintVersion(string version)
+    {
+        Console.WriteLine($"MiljodataSearchClient version {version}");
+        Console.WriteLine();
+    }
+
     public static string GetSearchTerm()
     {
         string? searchTerm;
